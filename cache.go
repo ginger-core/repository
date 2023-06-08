@@ -8,7 +8,7 @@ import (
 )
 
 type Cache interface {
-	GetConnection() any
+	GetDB() any
 
 	Store(ctx context.Context, key string, value any,
 		expiration ...time.Duration) errors.Error
