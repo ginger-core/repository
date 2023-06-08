@@ -17,8 +17,8 @@ type Cache interface {
 	Expire(ctx context.Context, key string, expiration time.Duration) errors.Error
 	Lock(ctx context.Context, key string, expiration time.Duration) errors.Error
 
-	InsertItem(ctx context.Context, sourceKey string, value any) errors.Error
-	MarshalInsertItem(ctx context.Context, sourceKey string, value any) errors.Error
+	InsertItem(ctx context.Context, sourceKey string, value Entity) errors.Error
+	MarshalInsertItem(ctx context.Context, sourceKey string, value Entity) errors.Error
 
 	ListKeys(ctx context.Context, pattern string) ([]string, errors.Error)
 
